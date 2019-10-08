@@ -3,14 +3,16 @@ import { useLocalStorage } from './useLocalStorage'
 
 export const useDarkMode = () => {
   // save darkmode to local storage
-  const [darkValue, setDarkValue] = useLocalStorage('dark')
+  const [darkMode, setDarkMode] = useLocalStorage('dark')
 
+  // if darkmode is truthy, add the class dark-mode
+  // else remove the class dark-mode from the body
   useEffect(() => {
-    darkValue
+    darkMode
       ? document.body.classList.add('dark-mode')
       : document.body.classList.remove('dark-mode')
-  }, [darkValue])
+  }, [darkMode])
 
   // return the destructured array
-  return [darkValue, setDarkValue]
+  return [darkMode, setDarkMode]
 }
