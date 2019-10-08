@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { useLocalStorage } from './useLocalStorage'
 
 export const useDarkMode = () => {
@@ -7,8 +7,8 @@ export const useDarkMode = () => {
 
   useEffect(() => {
     darkValue
-      ? document.querySelector(body).classList.add('dark-mode')
-      : document.querySelector(body).classList.remove('dark-mode')
+      ? document.body.classList.add('dark-mode')
+      : document.body.classList.remove('dark-mode')
   }, [darkValue])
 
   // return the destructured array
