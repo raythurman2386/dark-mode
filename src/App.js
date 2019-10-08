@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Switch, Route } from 'react-router-dom'
 
+import Home from './components/Home'
 import Charts from './components/Charts'
 import Navbar from './components/Navbar'
 
@@ -18,7 +20,13 @@ const App = () => {
   return (
     <div className='App'>
       <Navbar />
-      <Charts coinData={coinData} />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route
+          path='/charts'
+          render={props => <Charts {...props} coinData={coinData} />}
+        />
+      </Switch>
     </div>
   )
 }
