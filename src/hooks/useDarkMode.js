@@ -3,7 +3,7 @@ import { useLocalStorage } from './useLocalStorage'
 
 export const useDarkMode = () => {
   // save darkmode to local storage
-  const [darkMode, setDarkMode] = useLocalStorage('dark')
+  const [darkMode, setDarkMode] = useLocalStorage('dark', false)
 
   // if darkmode is truthy, add the class dark-mode
   // else remove the class dark-mode from the body
