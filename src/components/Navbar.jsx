@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useDarkMode } from '../hooks/useDarkMode'
 
 const Navbar = () => {
-  const [darkMode, setDarkMode, handleDarkMode] = useDarkMode()
+  const [darkMode, handleDarkMode] = useDarkMode()
 
   return (
     <nav className='navbar'>

@@ -18,5 +18,5 @@ export const useDarkMode = () => {
   }
 
   // return the destructured array
-  return [darkMode, setDarkMode, handleToggle]
+  return [darkMode, handleToggle]
 }
