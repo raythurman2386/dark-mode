@@ -13,6 +13,10 @@ export const useDarkMode = () => {
       : document.body.classList.remove('dark-mode')
   }, [darkMode])
 
+  const handleToggle = () => {
+    setDarkMode(!darkMode)
+  }
+
   // return the destructured array
-  return [darkMode, setDarkMode]
+  return [darkMode, setDarkMode, handleToggle]
 }
