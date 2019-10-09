@@ -22,8 +22,9 @@ const App = () => {
       <Navbar />
       <Switch>
         <Route exact path='/' component={Home} />
+        {/* <Route path='/chart' component={} /> */}
         <Route
-          path='/charts'
+          path='/allcharts'
           render={props => <Charts {...props} coinData={coinData} />}
         />
       </Switch>
