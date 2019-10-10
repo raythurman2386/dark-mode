@@ -180,6 +180,36 @@ img {
   box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
 }
 
+a {
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.home {
+  margin-top: 250px;
+
+  h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    padding: 15px;
+  }
+
+  a {
+    font-size: 1.8rem;
+    border-radius: 8px;
+    padding: 5px 12px;
+  }
+}
+
 .dark-mode__toggle {
   background: papayawhip;
   border-radius: 50px;
@@ -197,6 +227,7 @@ img {
   position: absolute;
   transition: 0.2s;
   width: 20px;
+  cursor: pointer;
 }
 
 .toggled {
@@ -229,8 +260,8 @@ img {
 .coin__title {
   display: block;
   margin-left: 8px;
-    min-width: 160px;
-text-align: left;
+  min-width: 160px;
+  text-align: left;
 }
 
 .coin__symbol {
@@ -247,7 +278,12 @@ text-align: left;
   background-color: #313843;
 
   .navbar {
-    background-color: #1F2022;
+    color: #fff;
+    background-color: #1f2022;
     border: none;
+  }
+
+  a {
+    color: #fff;
   }
 }
